@@ -1,8 +1,8 @@
 import * as Json from 'doge-json';
 import { listen } from 'nodesite.eu-local';
 import { Server, Socket } from 'socket.io';
-import { Deployment } from './classes';
 
+import { Deployment } from './classes';
 import { name, port } from './config';
 
 const { create, server } = listen({
