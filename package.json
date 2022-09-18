@@ -1,0 +1,29 @@
+{
+	"name": "nodesite-deploy",
+	"description": "deploy programs to nodesite.eu",
+	"version": "0.1.0-1",
+	"main": "lib/index.js",
+	"bin": {
+		"nodesite-deploy": "lib/cli.js"
+	},
+	"scripts": {
+		"start": "node lib/cli"
+	},
+	"author": "Prokop Schield",
+	"dependencies": {
+		"@prokopschield/argv": "^0.1.2",
+		"doge-config": "^0.3.20",
+		"doge-json": "^1.2.8",
+		"nodesite-storedir": "0.0.1-1",
+		"nodesite.eu-core": "^1.3.1",
+		"nodesite.eu-local": "^1.2.4",
+		"nsblob": "^0.2.17",
+		"ps-std": "^0.1.6",
+		"socket.io": "^4.5.2"
+	},
+	"devDependencies": {
+		"@types/node": ">=16"
+	},
+	"keywords": [],
+	"license": "GPL-3.0-or-later"
+}
