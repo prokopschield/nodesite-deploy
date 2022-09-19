@@ -62,4 +62,8 @@ export class Deployment extends EventEmitter {
 	get is_waiting() {
 		return !!(this._stdout.length || this._stderr.length);
 	}
+
+	kill() {
+		this._process?.kill();
+	}
 }
