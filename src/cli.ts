@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import nsblob from 'nsblob';
+
 import { client } from './client';
 
 if (process.argv[2] === '--server') {
