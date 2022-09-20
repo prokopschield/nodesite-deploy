@@ -6,7 +6,7 @@ export async function client(
 	directory: string,
 	command: string = 'pnpm start'
 ) {
-	const hash = directory.match(/^[\w~]{43}/g)
+	const hash = directory.match(/^[\w~]{43}$/g)
 		? directory
 		: await store(directory, /node_modules/);
 
