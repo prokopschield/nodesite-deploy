@@ -31,7 +31,7 @@ export class Deployment extends EventEmitter {
 		);
 
 		this._process = exec(
-			`docker run --rm -c 3 --pids-limit=${pids_limit} --memory="${mem_limit}" -i -w /app node sh -c "1>/dev/null 2>/dev/null yarn global add pnpm nodesite-storedir nodesite-cdn; nodesite-cdn cat ${hash} | bash"`
+			`docker run --rm -c 3 --pids-limit=${pids_limit} --memory="${mem_limit}" -i -w /app node sh -c "1>/dev/null 2>/dev/null yarn global add pnpm nodesite-storedir@no-native nodesite-cdn; nodesite-cdn cat ${hash} | bash"`
 		);
 
 		this._process.stdout?.on('data', (chunk: Buffer) => {
